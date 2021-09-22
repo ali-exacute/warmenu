@@ -1,5 +1,20 @@
 # WarMenu
-Inspired by [Dear ImGui](https://github.com/ocornut/imgui) and GTA V menu system
+**This is a modified version of WarMenu to works with my scripts**
+
+Main Changes in this version :
+>Holding scroll will now works like vMenu (it will get faster as you hold it longer)
+>
+>Default Colors to GTA Online colors
+>
+>Submenu can have different title from main menu
+>
+>Strings now can be longer than 99 characters (kinda)
+>
+>Button callback is now more specific : `left` | `right` | `select`
+>
+>InputButton now have minimum character argument
+>
+>Add resetSelectedOption() to ... reset the selected option
 
 ## How to Install
 1. Place it to `/resources` folder
@@ -46,6 +61,9 @@ WarMenu.IsItemHovered()
 WarMenu.IsItemSelected()
 -- See Usage section for more details
 
+WarMenu.resetSelectedOption()
+-- Reset selected options to index 1 (could be useful if the changes remove some items from the menu)
+
 WarMenu.End() -- Processing key events and menu logic, use it in loop
 
 
@@ -81,6 +99,16 @@ WarMenu.SetMenuButtonPressedSound(id, name, set) -- https://pastebin.com/0neZdsZ
 
 
 ## Changelog
+
+### 2.0 
+* Holding scroll will now works like vMenu (it will get faster as you hold it longer)
+* Default Colors to GTA Online colors
+* Submenu can have different title from main menu
+* Strings now can be longer than 99 characters (kinda)
+* Button callback is now more specific : `left` | `right` | `select`
+* InputButton now have minimum character argument
+* Add resetSelectedOption() to ... reset the selected option
+
 ### 1.5
 * Added styles support
 * Added `WarMenu.SetMenuStyle` API
